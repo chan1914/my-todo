@@ -10,8 +10,6 @@ import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Map;
-
 
 @Route("")
 public class MainView extends VerticalLayout {
@@ -21,9 +19,8 @@ public class MainView extends VerticalLayout {
 
     public MainView() {
 
-        Map<String,String> responseBody;
-        responseBody = restTemplate.getForObject(
-                "http://server.mikk149c.com:89/GetGoups", Map<String,String>.class);
+        Group[] responseBody = restTemplate.getForObject(
+                "http://server.mikk149c.com:89/GetGoups", Group[].class);
 
         for(Group g : responseBody){
             System.out.println(g.getGroup());
