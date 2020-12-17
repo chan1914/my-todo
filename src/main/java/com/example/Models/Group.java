@@ -1,6 +1,7 @@
 package com.example.Models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -9,7 +10,9 @@ public class Group {
     private String group;
     private int size;
 
-    public Group(){
+    public Group(@JsonProperty("Group") String group, @JsonProperty("Size") int size) {
+        this.group = group;
+        this.size = size;
     }
 
     public String getGroup() {
