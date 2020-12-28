@@ -23,8 +23,6 @@ public class MainView extends VerticalLayout {
     public MainView() {
 
 
-
-
         grid.setItems(responseBody);
         add(grid);
 

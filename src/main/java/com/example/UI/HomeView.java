@@ -31,13 +31,19 @@ public class HomeView extends VerticalLayout{
         DrawerToggle drawerToggle = new DrawerToggle();
         add(drawerToggle);
 
-
-        ListBox<String> list = new ListBox<>();
         grid.setItems(responseBody);
-        grid.setWidth("50%");
+        grid.setWidth("30%");
+
+        ListBox listbox = new ListBox();
+        grid.addItemClickListener(
+                event -> {
+                    listbox.setItems(event.getItem().getGroup());
+                });
 
         add(logo);
         add(grid);
+        add(listbox);
+
 
     }
 }
