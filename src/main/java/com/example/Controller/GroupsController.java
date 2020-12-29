@@ -1,8 +1,6 @@
 package com.example.Controller;
 
-
 import com.example.Models.Group;
-import com.example.Models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -26,17 +24,6 @@ public class GroupsController {
         return responseBody;
     }
 
-    public User[] getUsers() {
-
-        User[] users = restTemplate.getForObject(
-                "http://server.mikk149c.com:89/analysis/get", User[].class);
-
-        for (User u : users) {
-            System.out.println(u.getId());
-
-        }
-        return users;
-    }
 
 
 
