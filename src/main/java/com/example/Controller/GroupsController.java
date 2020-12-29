@@ -14,7 +14,7 @@ public class GroupsController {
     public Group[] getGroups() {
 
         Group[] responseBody = restTemplate.getForObject(
-                "http://server.mikk149c.com:89/GetGoups", Group[].class);
+                "http://DQF-Analysis-Repo/GetGoups", Group[].class);
 
         for (Group g : responseBody) {
             System.out.println(g.getGroup());

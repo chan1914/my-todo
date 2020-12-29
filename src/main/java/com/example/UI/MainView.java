@@ -18,7 +18,7 @@ public class MainView extends VerticalLayout {
     Grid<Group> grid = new Grid<>(Group.class);
 
     Group[] responseBody = restTemplate.getForObject(
-            "http://server.mikk149c.com:89/GetGoups", Group[].class);
+            "http://DQF-Analysis-Repo/GetGoups", Group[].class);
 
     public MainView() {
 
