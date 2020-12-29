@@ -5,13 +5,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.client.RestTemplate;
 
 /**
  * The entry point of the Spring Boot application.
  */
 
-//@EnableAsync
+@EnableAsync
 @SpringBootApplication
 //@EnableEurekaServer
 public class Application extends SpringBootServletInitializer {
